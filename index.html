@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Gener - 桌面上的AI绘图（ComfyUI）的图形界面应用</title>
+        <link rel="icon" href="./app-icon/app-icon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Gener 是一个桌面上的AI绘图（ComfyUI）的图形界面应用，提供便捷的绘图功能。">
+        <meta name="keywords" content="AI绘图, ComfyUI, 图形界面, 桌面应用, Gener">
+        <meta name="author" content="panda44312">
+        <meta property="og:title" content="Gener - 桌面上的AI绘图（ComfyUI）的图形界面应用">
+        <meta property="og:description" content="Gener 是一个桌面上的AI绘图（ComfyUI）的图形界面应用，提供便捷的绘图功能。">
+        <meta property="og:image" content="./src/1.png">
+        <meta property="og:url" content="https://github.com/panda44312/gener">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Gener - 桌面上的AI绘图（ComfyUI）的图形界面应用">
+        <meta name="twitter:description" content="Gener 是一个桌面上的AI绘图（ComfyUI）的图形界面应用，提供便捷的绘图功能。">
+        <meta name="twitter:image" content="./src/1.png">
+
+        <style>
+            
+            :root {
+                --app-color: #000000;
+                --app-bg: #ffffff;
+                --md-sys-color-primary-o: 33, 150, 243;
+                --md-sys-color-primary: rgb(var(--md-sys-color-primary-o));
+                --md-sys-color-secondary: rgb(var(--md-sys-color-primary-o));
+                --md-list-container-color: rgb(var(--md-sys-color-primary-o), 0.1);
+            }
+
+            body {
+                font-family: "Noto Sans SC";
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                background-color: #f5f5f5;
+                padding: 20px;
+                padding-top: 10vh;
+                user-select: none;
+            }
+
+            header {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .content {
+                display: flex;
+                gap: 10px;
+                margin-bottom: 40px;
+            }
+
+            .content a {
+                text-decoration: none;
+                color: inherit;
+            }
+            
+            .screenshot img {
+                width: 100%;
+                max-width: max-content;
+                height: auto;
+                border-radius: 1rem;
+            }
+
+            md-filled-button {
+                font-family: "Noto Sans SC";
+            }
+
+        </style>
+        <script type="importmap">
+            {
+                "imports": {
+                    "@material/web/": "https://esm.run/@material/web/"
+                }
+            }
+        </script>
+        <script type="module">
+            import '@material/web/all.js';
+            import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
+            document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Gener</h1>
+            <p>桌面上的AI绘图（ComfyUI）的图形界面应用</p>
+        </header>
+        <div class="content">
+            <a href="https://github.com/panda44312/gener" target="_blank">
+                <md-filled-button>
+                    <md-icon slot="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="20" height="20" fill="currentColor">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                        </svg></svg>
+                    </md-icon>
+                    访问 GitHub 仓库
+                </md-filled-button>
+            </a>
+            <a href="https://github.com/panda44312/gener/releases" target="_blank">
+                <md-filled-button>
+                    <md-icon slot="icon">
+                        download
+                    </md-icon>
+                    下载最新版本
+                </md-filled-button>
+            </a>
+        </div>
+        <div class="screenshot">
+            <img src="./src/1.png" alt="应用截图">
+        </div>
+
+    </body>
+</html>
